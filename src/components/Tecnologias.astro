@@ -1,0 +1,157 @@
+---
+import CardTech from "./CardTech.astro";
+import BootstrapIcon from "./icons/BootstrapIcon.astro";
+import CssIcon from "./icons/CssIcon.astro";
+import GitIcon from "./icons/GitIcon.astro";
+import HtmlIcon from "./icons/HtmlIcon.astro";
+import JavascriptIcon from "./icons/JavascriptIcon.astro";
+import MongoIcon from "./icons/MongoIcon.astro";
+import MysqlIcon from "./icons/MysqlIcon.astro";
+import NodeIcon from "./icons/NodeIcon.astro";
+import PostgresqlIcon from "./icons/PostgresqlIcon.astro";
+import ReactIcon from "./icons/ReactIcon.astro";
+import TailwindIcon from "./icons/TailwindIcon.astro";
+import TypescriptIcon from "./icons/TypescriptIcon.astro";
+import VueIcon from "./icons/VueIcon.astro";
+
+interface Tecnologia {
+  name: string;
+  icon?: any;
+  image?: string;
+}
+const TECNOLOGIAS = [
+  {
+    name: "Vue",
+    icon: VueIcon,
+    img: ''
+  },
+  {
+    name: "React",
+    icon: ReactIcon,
+    img: ''
+  },
+  {
+    name: "Javascript",
+    icon: JavascriptIcon,
+    img: ''
+  },
+  {
+    name: "Typescript",
+    icon: TypescriptIcon,
+    img: ''
+  },
+  {
+    name: "Html",
+    icon: HtmlIcon,
+    img: ''
+  },
+  {
+    name: "Css",
+    icon: CssIcon,
+    img: ''
+  },
+  {
+    name: "Bootstrap",
+    icon: BootstrapIcon,
+    img: ''
+  },
+  {
+    name: "Tailwind",
+    icon: TailwindIcon,
+    img: ''
+  },
+  {
+    name: "Mysql",
+    icon: MysqlIcon,
+    img: ''
+  },
+  {
+    name: "Postgresql",
+    icon: PostgresqlIcon,
+    img: ''
+  },
+  {
+    name: "Node",
+    icon: NodeIcon,
+    img: ''
+  },
+  {
+    name: "Mongo",
+    icon: MongoIcon,
+    img: ''
+  },
+  {
+    name: "Python",
+    icon: undefined,
+    img: './python.png'
+  },
+  {
+    name: "Git",
+    icon: GitIcon,
+    img: ''
+  },
+];
+---
+
+<li
+  class="grid none grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 content-center gap-10 justify-items-center mt-10"
+>
+  {
+    TECNOLOGIAS.map(tecnologia => (
+      <div class="card">
+      { tecnologia.icon && (<div class="side front"><tecnologia.icon class="size-36" /></div>)}  
+      { tecnologia.name && (<img src={tecnologia.img}/>)}  
+
+        <div class="side back">{ tecnologia.name }</div>
+      </div>
+    ))
+  }
+</li>
+
+
+
+<style>
+  .card {
+    position: relative;
+    width: 144px;
+    height: 144px;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    transition: transform 1s ease;
+  }
+
+  .card:hover {
+    transform: rotateY(180deg);
+  }
+
+  .card .side {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+    border-radius: 10px;
+  }
+
+  .card .front {
+    width: 100%;
+    height: 100%;
+  }
+
+  .card .back {
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: #383D3B;
+    opacity: 0.8;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+
+  }
+</style>
