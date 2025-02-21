@@ -5,6 +5,7 @@ import MongoIcon from "./icons/MongoIcon.astro";
 import NodeIcon from "./icons/NodeIcon.astro";
 import LinkIcon from "./icons/Link.astro";
 import TailwindIcon from "./icons/TailwindIcon.astro";
+import PrimeVueIcon from "./icons/PrimeVue.astro";
 import VueIcon from "./icons/VueIcon.astro";
 import TypescriptIcon from "./icons/TypescriptIcon.astro";
 import Badge from "./Badge.astro";
@@ -14,6 +15,11 @@ const TAGS = {
     name: "Vue3.js",
     class: "bg-[#35495E] text-[#41b883]",
     icon: VueIcon,
+  },
+  PRIMEVUE: {
+    name: "PrimeVue",
+    class: "bg-[#445B71] text-[#41B783]",
+    icon: PrimeVueIcon,
   },
   TAILWIND: {
     name: "Tailwind CSS",
@@ -51,18 +57,95 @@ const PROYECTS = [
   {
     badget: [
       {
-        name: "Colaborativo",
+        name: "Sector Privado",
         color: "bg-blue-100 text-blue-800",
       },
     ],
-    description:
-      "Sistema de Gestión de Préstamos Bancarios. Aplicación web desarrollada para optimizar los procesos de gestión de préstamos bancarios, dirigida a gerentes y personal de seguridad de la empresa. Permite visualizar información crucial de manera eficiente y segura, incluyendo módulos de usuarios, préstamos, gerencias, agencias, liquidaciones y cierres semanales. Este proyecto ha resultado en una mejora en la eficiencia, mayor control y seguridad en el acceso a la información, ahorro de tiempo y recursos gracias a la automatización, y una interfaz intuitiva.",
+    description: [
+      "Migración del sitio oficial Funticket.mx, pasando de una arquitectura basada en Next.js y Laravel a una landing page moderna en Vue 3 que eliminó las limitaciones del backend original. Este rediseño técnico mejoró drásticamente la gestión de contenidos y eventos, además de optimizar el rendimiento y la experiencia de usuario. Gracias a esta transformación, la plataforma —que ya había comercializado más de 1.5 millones de boletos a nivel nacional e internacional— ofrece hoy un servicio más ágil, confiable y personalizado.",
+    ],
+
+    list: [],
     github: [],
 
-    image: "/proyects/pgsHd.jpg",
+    images: ["/proyects/funticket/funticket.png"],
     link: "",
     tags: [TAGS.VUE, TAGS.TYPESCRIPT, TAGS.TAILWIND],
-    title: "PGS - Agentes y Seguridad",
+    title: "Funticket",
+  },
+  {
+    badget: [
+      {
+        name: "Sector Privado",
+        color: "bg-blue-100 text-blue-800",
+      },
+    ],
+    description: [
+      "PGS es una PWA desarrollada en Vue 3 que agiliza la gestión de clientes y préstamos mediante una interfaz interactiva y eficiente. El sistema permite visualizar información detallada de créditos, procesar cierres semanales, gestionar liquidaciones y registrar pagos. Además, integra funcionalidades para el registro de gastos, ventas y otros movimientos realizados por gerentes y personal de seguridad, facilitando la toma de decisiones y mejorando la administración financiera de la empresa."
+    ],
+
+    list: [],
+    github: [],
+
+    images: ["/proyects/pgs/pgs1.png", "/proyects/pgs/pgs2.png"],
+    link: "",
+    tags: [TAGS.VUE, TAGS.TYPESCRIPT, TAGS.TAILWIND],
+    title: "Financiera Xpress - PGS",
+  },
+  {
+    badget: [
+      {
+        name: "Sector Privado",
+        color: "bg-blue-100 text-blue-800",
+      },
+    ],
+    description: [
+      "SOLIM es una PWA que moderniza el proceso de solicitud de préstamos a través de una interfaz intuitiva y estructurada. La aplicación permite a los agentes capturar y validar información de clientes y avales mediante formularios dinámicos, realizar evaluaciones preliminares y dar seguimiento al estado de las solicitudes en tiempo real.",
+    ],
+    list: [],
+    github: [],
+
+    images: ["/proyects/pgs/solim1.png", "/proyects/pgs/solim2.png"],
+    link: "",
+    tags: [TAGS.VUE, TAGS.TYPESCRIPT, TAGS.TAILWIND],
+    title: "Financiera Xpress - SOLIM",
+  },
+  {
+    badget: [
+      {
+        name: "Sector Privado",
+        color: "bg-blue-100 text-blue-800",
+      },
+    ],
+    description: [
+      "El Punto de Venta (POS) de la Juguetería THS, es un sistema web diseñado para optimizar el proceso de ventas en tienda, ofreciendo una experiencia ágil y eficiente. El sistema registra las ventas y el tipo de pago —sin procesar transacciones directamente—, permite visualizar productos, aplicar descuentos, gestionar traslados entre almacenes y consultar el historial de ventas, brindando así un mayor control sobre las operaciones diarias."
+    ],
+
+    list: [],
+    github: [],
+
+    images: ["/proyects/ths/ths1.png", "/proyects/ths/ths2.png"],
+    link: "",
+    tags: [TAGS.VUE, TAGS.TYPESCRIPT, TAGS.TAILWIND],
+    title: "THS - POS",
+  },
+  {
+    badget: [
+      {
+        name: "Sector Privado",
+        color: "bg-blue-100 text-blue-800",
+      },
+    ],
+    description: [
+      "El admin de Jugueterzía THS, es un sistema que permite administrar un CRUD completo de inventario, facilitando la creación, edición, eliminación y consulta de productos en tiempo real. Además, proporciona herramientas para gestionar el stock de manera precisa, asegurando un mejor seguimiento de los artículos disponibles en tienda y almacenes.",
+    ],
+    list: [],
+    github: [],
+
+    images: ["/proyects/ths/ths3.png"],
+    link: "",
+    tags: [TAGS.VUE, TAGS.PRIMEVUE, TAGS.TYPESCRIPT, TAGS.TAILWIND],
+    title: "THS - Admin",
   },
   {
     badget: [
@@ -71,8 +154,9 @@ const PROYECTS = [
         color: "bg-gray-100 text-gray-800",
       },
     ],
-    description:
+    description: [
       "Proyecto fullstack diseñado para la eficiente gestión de citas en una amplia variedad de servicios, como corte de cabello, peinados de boda, uñas, entre otros. Su versatilidad permite su adaptación a cualquier tipo de negocio. El proyecto abarca tanto el frontend como el backend, proporcionando una solución integral y técnica para optimizar la administración de citas.",
+    ],
     github: [
       {
         title: "Frontend",
@@ -84,86 +168,16 @@ const PROYECTS = [
       },
     ],
 
-    image: "/proyects/salon1.jpg",
+    images: ["/proyects/salon1.jpg", "/proyects/salon2.jpg"],
     link: "https://appsalon-mevn-frontend-sigma.vercel.app/auth/login",
     tags: [TAGS.VUE, TAGS.TAILWIND, TAGS.NODE, TAGS.EXPRESS, TAGS.MONGODB],
     title: "FlexiAgenda",
   },
-  {
-    badget: [
-      {
-        name: "Personal",
-        color: "bg-gray-100 text-gray-800",
-      },
-    ],
-    description:
-      "Aplicación web desarrollada con el framework Vue.js 3 y su ecosistema de herramientas. Permite a los usuarios registrar, categorizar y realizar un seguimiento de sus gastos personales",
-    github: [
-      {
-        title: "Frontend",
-        link: "https://github.com/sahidAleDev/app_control_gastos",
-      },
-    ],
-    image: "/proyects/gs.jpg",
-    link: "https://65f2144cb781d72ddeddd980--astonishing-moxie-5bb13f.netlify.app/",
-    tags: [TAGS.VUE, TAGS.CSS],
-    title: "GastoSencillo",
-  },
 ];
 ---
 
-{
-  PROYECTS.map(({ description, github, image, link, tags, title, badget }) => (
-    <article class="mt-10">
-      <h3 class="text-2xl font-semibold text-yellow-200 mb-5 flex items-center gap-2">
-        {title}
-        <Badge class={badget[0].color}>{badget[0].name}</Badge>
-      </h3>
-
-      <ul>
-        {github.length > 0 &&
-          github.map(({ title, link }) => (
-            <a
-              href={link}
-              target="_blank"
-              class="text-white bg-[#24292F] hover:bg-[#24292F]/90 focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30 me-2 mb-2"
-            >
-              <svg
-                class="w-4 h-4 me-2"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-              Código
-              {title}
-            </a>
-          ))}
-      </ul>
-
-      <p class="text-lg mt-5 mb-4 text-pretty" set:html={description} />
-
-      <ul class="flex flex-wrap gap-2 flex-row mb-10 jus">
-        {tags.length > 0 &&
-          tags.map((tag) => (
-            <li>
-              <span
-                class={`flex items-center gap-x-2 rounded-full text-xs py-1 px-2  ${tag.class}`}
-              >
-                <tag.icon class="size-5" />
-                {tag.name}
-              </span>
-            </li>
-          ))}
-      </ul>
-
-      {link ? (
+<!--
+      {image.ma ? (
         <a href={link} target="_blank">
           <figure class="relative group/figure overflow-hidden">
             <div class="rounded absolute inset-0 bg-black/50 text-white flex items-center justify-center  sm:translate-y-full font-bold text-3xl z-10 group-hover/figure:translate-y-0 transition">
@@ -184,6 +198,80 @@ const PROYECTS = [
           class="rounded shadow-2xl shadow-white/10 w-full h-full object-cover relative"
         />
       )}
-    </article>
-  ))
+ -->{
+  PROYECTS.map(
+    ({ description, github, images, link, tags, title, badget, list }) => (
+      <article class="mt-10">
+        <h3 class="text-2xl font-semibold text-yellow-200 mb-5 flex flex-wrap items-center gap-2">
+          {title}
+          <Badge class={badget[0].color}>{badget[0].name}</Badge>
+        </h3>
+
+        <ul>
+          {github.length > 0 &&
+            github.map(({ title, link }) => (
+              <a
+                href={link}
+                target="_blank"
+                class="text-white bg-[#24292F] hover:bg-[#24292F]/90 focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30 me-2 mb-2"
+              >
+                <svg
+                  class="w-4 h-4 me-2"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                Código
+                {title}
+              </a>
+            ))}
+        </ul>
+
+        {description &&
+          description.length > 0 &&
+          description.map((paragraph: string) => (
+            <p class="text-lg mt-5 mb-4 text-pretty" set:html={paragraph} />
+          ))}
+
+        {list && list.length > 0 && (
+          <ul class="list-disc pl-6 mb-4 space-y-2 text-gray-200">
+            {list.map((item) => (
+              <li class="text-base">{item}</li>
+            ))}
+          </ul>
+        )}
+
+        <ul class="flex flex-wrap gap-2 flex-row mb-10 jus">
+          {tags.length > 0 &&
+            tags.map((tag) => (
+              <li>
+                <span
+                  class={`flex items-center gap-x-2 rounded-full text-xs py-1 px-2  ${tag.class}`}
+                >
+                  <tag.icon class="size-5" />
+                  {tag.name}
+                </span>
+              </li>
+            ))}
+        </ul>
+
+        <div class="space-y-2">
+          {images.map((image) => (
+            <img
+              src={image}
+              alt={`Captura de pantalla del proyecto ${title}`}
+              class="rounded-lg shadow-2xl shadow-white/10 w-full h-full object-cover relative"
+            />
+          ))}
+        </div>
+      </article>
+    )
+  )
 }

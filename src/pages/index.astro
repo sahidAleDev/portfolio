@@ -1,128 +1,139 @@
----	
-import Badge from '../components/Badge.astro';
-import BriefCase from '../components/icons/BriefCase.astro';
-import Code from '../components/icons/Code.astro';
-import Experience from '../components/Experience.astro';
-import GithubIcon from '../components/icons/GithubIcon.astro';
-import Layout from '../layouts/Layout.astro';
-import LinkedinIcon from '../components/icons/LinkedinIcon.astro';
-import Mail from '../components/icons/Mail.astro';
-import SectionContainer from '../components/SectionContainer.astro';
-import SocialPill from '../components/icons/SocialPill.astro';
-import Proyects from '../components/Proyects.astro';
-import Tecnologias from '../components/Tecnologias.astro';
-import Contact from '../components/Contact.astro';
-import FolderIcon from '../components/icons/FolderIcon.astro';
-import ContactIcon from '../components/icons/ContactIcon.astro';
-import HandLoveIcon from '../components/icons/HandLoveIcon.astro';
-
+---
+import Badge from "../components/Badge.astro";
+import BriefCase from "../components/icons/BriefCase.astro";
+import Code from "../components/icons/Code.astro";
+import Experience from "../components/Experience.astro";
+import GithubIcon from "../components/icons/GithubIcon.astro";
+import Layout from "../layouts/Layout.astro";
+import LinkedinIcon from "../components/icons/LinkedinIcon.astro";
+import Mail from "../components/icons/Mail.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import SocialPill from "../components/icons/SocialPill.astro";
+import Proyects from "../components/Proyects.astro";
+import Tecnologias from "../components/Tecnologias.astro";
+import Contact from "../components/Contact.astro";
+import FolderIcon from "../components/icons/FolderIcon.astro";
+import ContactIcon from "../components/icons/ContactIcon.astro";
+import HandLoveIcon from "../components/icons/HandLoveIcon.astro";
 ---
 
-<Layout 
-	title="Portfolio Sahid Ale" 
-	description="Cotrata a Sahid Alejandro. Programador Frontend. Especializado en la creación de aplicaciones únicas. Disponible para trabajar."
+<Layout
+  title="Portfolio Sahid Ale"
+  description="Cotrata a Sahid Alejandro. Programador Frontend. Especializado en la creación de aplicaciones únicas. Disponible para trabajar."
 >
-	
-	<main class="px-10">
+  <SectionContainer class="py-32 pb-32 lg:py-44">
+    <img
+      src="./foto-sahid.png"
+      class="rounded-full size-20 mb-4 bg-yellow-200 border-none"
+      alt="sahidAle Foto"
+    />
+    <h1
+      class="text-white text-3xl font-bold flex flex-row gap-x-4 pb-4 md:text-4xl lg:text-5xl lg:pb-10"
+    >
+      Hey, soy Sahid
+      <a
+        href="https://www.linkedin.com/in/sahid-alejandro-mora-reyes-b91a99283/"
+        target="_blank"
+        rel="noopener"
+        class="flex justify-center items-center"
+      >
+        <Badge class="bg-green-100 text-green-800">#OpenToWork</Badge>
+      </a>
+    </h1>
+    <h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
+      <span>+3 años de experiencia.</span>
+      <span class="text-yellow-200 font-semibold"
+        >Me destaco como Programador Frontend</span
+      >,
+      <span class="text-red-200/90">
+        especializado en la creación de aplicaciones únicas</span
+      >.
+    </h2>
 
-		<SectionContainer class="py-32 pb-32 lg:py-44">
-			<img src="./foto-sahid.png" class="rounded-full size-20 mb-4 bg-yellow-200 border-none" alt="sahidAle Foto">
-			<h1 class="text-white text-3xl font-bold flex flex-row gap-x-4 pb-4 md:text-4xl lg:text-5xl lg:pb-10">
-				Hey, soy Sahid 
-				<a 
-					href="https://www.linkedin.com/in/sahid-alejandro-mora-reyes-b91a99283/" 
-					target="_blank" 
-					rel="noopener" 
-					class="flex justify-center items-center"
-				>
-					<Badge class="bg-green-100 text-green-800">Disponible para trabajar</Badge>
-				</a>
-			</h1>
-			<h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
-				<span>+3 años de experiencia.</span>  
-				<span class="text-yellow-200 font-semibold">Me destaco como Programador Frontend</span>,
-				<span class="text-red-200/90"> especializado en la creación de aplicaciones únicas</span>.
-			</h2>
-	
-	
-			<nav class="flex gap-4 mt-8 flex-wrap">
-				<SocialPill href="https://www.linkedin.com/in/sahid-alejandro-mora-reyes-b91a99283/">
-					<LinkedinIcon class="size-4 md:size-6"/>
-					LinkedIn
-				</SocialPill>
-				
-				<SocialPill href="https://github.com/sahidAleDev">
-					<GithubIcon class="size-4 md:size-6"/>
-					GitHub
-				</SocialPill>
-				
-				<SocialPill href="">
-					<Mail class="size-4 md:size-6"/>
-					sahidaledev@gmail.com
-				</SocialPill>
-				</a>
-			</nav>
-		</SectionContainer>
+    <nav class="flex gap-4 mt-8 flex-wrap">
+      <SocialPill
+        href="https://www.linkedin.com/in/sahid-alejandro-mora-reyes-b91a99283/"
+      >
+        <LinkedinIcon class="size-4 md:size-6" />
+        LinkedIn
+      </SocialPill>
 
-		<SectionContainer id="sobre-mi">
-			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
-				<HandLoveIcon class="size-7"/>
-				Hola 
-			</h2>
+      <SocialPill href="https://github.com/sahidAleDev">
+        <GithubIcon class="size-4 md:size-6" />
+        GitHub
+      </SocialPill>
 
-			<!--
+      <SocialPill href="">
+        <Mail class="size-4 md:size-6" />
+        sahidaledev@gmail.com
+      </SocialPill>
+    </nav>
+  </SectionContainer>
+
+  <SectionContainer id="sobre-mi">
+    <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+      <HandLoveIcon class="size-7" />
+      Hola
+    </h2>
+
+    <!--
 				<p class="text-base mb-4 text-pretty">
 					Soy Sahid Alejandro, egresado de la Universidad Michoacana de San Nicolás de Hidalgo (UMSNH) como Ingeniero en Computación. Desde temprana edad, siempre he sentido una gran fascinación por todo lo relacionado con la tecnología. Mi afición por los videojuegos durante mi infancia me fue acercando gradualmente al mundo de la programación. A lo largo de estos años, he tenido la oportunidad de colaborar en diversos proyectos que me han permitido perfeccionar mis habilidades en la creación de interfaces minimalistas, enfocadas en brindar una experiencia de uso agradable y sencilla para los usuarios finales. Mi objetivo es seguir desarrollando sistemas que combinen funcionalidad y estética, aprovechando las últimas tecnologías y herramientas disponibles en el campo de la informática.
 				</p>
 			-->
 
-			<p class="text-base mb-4 text-pretty">
-				Soy Sahid Alejandro, Ingeniero en Computación por la UMSNH, apasionado por la tecnología desde temprana edad. Los videojuegos despertaron mi interés por la programación. He colaborado en proyectos que me permitieron perfeccionar mis habilidades en la creación de interfaces minimalistas y enfocadas en la experiencia del usuario. Mi objetivo es desarrollar sistemas que combinen funcionalidad y estética, aprovechando las últimas tecnologías informáticas.
-			</p>
+    <p class="text-base mb-4 text-pretty">
+      Soy Sahid Alejandro, Ingeniero en Computación por la Universidad
+      Michoacana de San Nicolás de Hidalgo. Mi pasión por la tecnología nació de
+      mi amor por los videojuegos, que me introdujeron al fascinante mundo de la
+      programación. Me especializo en el desarrollo de interfaces, donde combino
+      el diseño minimalista con una excelente experiencia de usuario. Busco
+      crear sistemas que no solo sean funcionales, sino que también ofrezcan una
+      experiencia excepcional, manteniéndome siempre actualizado con las últimas
+      tecnologías.
+    </p>
+  </SectionContainer>
 
+  <SectionContainer id="experiencia">
+    <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+      <BriefCase class="size-7" />
+      Experiencia laboral
+    </h2>
+    <Experience />
+  </SectionContainer>
 
-		</SectionContainer>
+  <SectionContainer id="proyectos">
+    <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+      <FolderIcon class="size-7" />
+      Proyectos donde he trabajado
+    </h2>
+    <Proyects />
+  </SectionContainer>
 
-		<SectionContainer id="experiencia">
-			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
-				<BriefCase class="size-7"/>
-				Experiencia laboral
-			</h2>
-			<Experience/>
-		</SectionContainer>
+  <SectionContainer id="tecnologias">
+    <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+      <Code class="size-7" />
+      Tecnologías que manejo
+    </h2>
+    <Tecnologias />
+  </SectionContainer>
 
-		<SectionContainer id="proyectos">
-			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
-				<FolderIcon class="size-7"/>
-				Proyectos
-			</h2>
-			<Proyects/>
-		</SectionContainer>
-
-		<SectionContainer id="tecnologias">
-			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
-				<Code class="size-7"/>
-				Tecnologías que manejo
-			</h2>
-			<Tecnologias/>
-		</SectionContainer>
-
+  <!--
 		<section id="contacto">
-
-			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center justify-center">
-				<ContactIcon class="size-7"/>
+			<h2
+				class="text-3xl font-semibold mb-6 flex gap-x-3 items-center justify-center"
+			>
+				<ContactIcon class="size-7" />
 				Contáctame
 			</h2>
-
-			<Contact/>
+	
+			<Contact />
 		</section>
-	</main>
+	 -->
 </Layout>
 
 <style>
-	.classImg {
-		filter: drop-shadow(
-			0 0 10px rgba(0, 0, 0, 0.)
-		);
-	}
+  .classImg {
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0));
+  }
 </style>

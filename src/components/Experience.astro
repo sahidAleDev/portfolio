@@ -1,25 +1,24 @@
 ---
-import type { Code } from "astro:components"
-import ExperienceItem from "./ExperienceItem.astro"
+import type { Code } from "astro:components";
+import ExperienceItem from "./ExperienceItem.astro";
 
-  const EXPERIENCE = [
-    {
-      date: 'Actualmente',
-      title: 'Programdor web en Calaverita.tech',
-      description: [
-        "Como programador frontend en Calaverita.tech, me he dedicado al desarrollo de vistas web utilizando Vue3 y TypeScript, lo que me ha permitido crear interfaces robustas y fáciles de mantener.",
-        "Además, he diseñado y desarrollado Landing Pages optimizadas utilizando tecnologías como Astro.js, garantizando una excelente experiencia de usuario y una carga eficiente del sitio. También he tenido la oportunidad de trabajar en la migración de proyectos existentes, como una Landing Page que pasó de PHP y HTML a Vue3, contribuyendo así a la modernización de la plataforma."
-      ],
-      link: 'https://calaverita.tech/'
-    }
-  ]
+const EXPERIENCE = [
+  {
+    date: "Actualmente",
+    title: "Desarrollador front-end en Calaverita.dev",
+    description: [
+      `Como Desarrollador Front-end en Calaverita.dev, me he especializado en la creación de aplicaciones web progresivas (PWA) y sistemas empresariales utilizando Vue 3, TypeScript y Tailwind CSS. Durante mi experiencia, he liderado el desarrollo de soluciones financieras y comerciales de alto impacto, incluyendo sistemas de gestión de préstamos, aplicaciones de punto de venta y plataformas administrativas. Recientemente, he dirigido con éxito la migración del sitio Funticket, demostrando mi capacidad para manejar proyectos complejos y adaptarme a nuevos desafíos. A través de mi trabajo, he implementado interfaces interactivas y responsivas que mejoran significativamente la eficiencia operativa de los negocios`,
+    ],
+    link: "https://calaverita.dev/",
+  },
+];
 ---
 
-<ol class="relative border-s border-gray-200 ml-3 mt-10">                  
+<ol class="relative border-s border-gray-200 ml-3 mt-10">
   {
-    EXPERIENCE.map(experience => (
+    EXPERIENCE.map((experience) => (
       <li class="mb-10 ms-4">
-        <ExperienceItem {...experience}/>  
+        <ExperienceItem {...experience} />
       </li>
     ))
   }
